@@ -114,9 +114,15 @@ export default function LandingPage() {
       <main className="container mx-auto px-4 py-8">
         {/* TÍTULO DA SEÇÃO DE PRODUTOS */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">Produtos Recomendados</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">Compre pelos links oficiais a baixo!</h2>
           <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
-            Os melhores produtos digitais para seu sucesso online.
+          Ofertas exclusivas dos nossos parceiros oficiais, com preços especiais. 
+          </p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">
+          Escolhemos os melhores produtos digitais para você! 
+          </h2>
+          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
+          Links oficiais, 100% confiáveis, aproveite com segurança e evite golpes!
           </p>
         </div>
 
