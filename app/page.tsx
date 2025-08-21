@@ -11,6 +11,7 @@
 
 import { ProfileHeader } from "@/components/profile-header"
 import { ProductCard } from "@/components/product-card"
+import Image from "next/image"
 
 /**
  * DADOS DOS PRODUTOS
@@ -20,19 +21,19 @@ import { ProductCard } from "@/components/product-card"
 const produtos = [
   {
     id: 1,
-    imagem: "/digital-marketing-product.png",
-    nome: "Curso Digital Marketing",
-    titulo: "Domine o Marketing Digital em 30 Dias",
-    valor: "R$ 497,00",
-    linkAfiliado: "https://seu-link-afiliado-1.com",
+    imagem: "/images/clareador-cicatribem.svg",
+    nome: "Clareador Dermico",
+    titulo: "Creme Clareador de Manchas – Melasma, Axilas, Virilha, Áreas Íntimas, Rosto e Corpo!",
+    valor: "R$ 127,00",
+    linkAfiliado: "https://www.instagram.com/souppe.shop/?next=%2F",
   },
   {
     id: 2,
-    imagem: "/ebook-vendas-online.png",
-    nome: "E-book Vendas Online",
-    titulo: "Estratégias Secretas para Vender na Internet",
-    valor: "R$ 97,00",
-    linkAfiliado: "https://seu-link-afiliado-2.com",
+    imagem: "/images/liftDetox.png",
+    nome: "liftDetox",
+    titulo: "O emagrecedor mais procurado do Brasil, Lift Detox Black, é um poderoso inibidor de gordura corporal com colágeno que ajuda a inibir o apetite, controla a ansiedade, acelera o metabolismo, combate a flacidez e seca muito a barriga grande!",
+    valor: "R$ 137,00",
+    linkAfiliado: "https://liftdetoxcaps.com/b4/?b4f=Nmk_2Td3Rv",
   },
   {
     id: 3,
@@ -92,11 +93,11 @@ const produtos = [
   },
   {
     id: 10,
-    imagem: "/curso-empreendedorismo.png",
-    nome: "Empreendedor Digital",
-    titulo: "Construa seu Império Digital do Zero",
-    valor: "R$ 1.497,00",
-    linkAfiliado: "https://seu-link-afiliado-10.com",
+    imagem: "/images/liftDetox.png",
+    nome: "liftDetox",
+    titulo: "O emagrecedor mais procurado do Brasil, Lift Detox Black, é um poderoso inibidor de gordura corporal com colágeno que ajuda a inibir o apetite, controla a ansiedade, acelera o metabolismo, combate a flacidez e seca muito a barriga grande!",
+    valor: "R$ 137,00",
+    linkAfiliado: "https://liftdetoxcaps.com/b4/?b4f=Nmk_2Td3Rv",
   },
 ]
 
@@ -114,16 +115,67 @@ export default function LandingPage() {
       <main className="container mx-auto px-4 py-8">
         {/* TÍTULO DA SEÇÃO DE PRODUTOS */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">Compre pelos links oficiais a baixo!</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">
+            Compre pelos links oficiais a baixo!
+          </h2>
+
           <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
           Ofertas exclusivas dos nossos parceiros oficiais, com preços especiais. 
           </p>
+
+          {/* SEÇÃO ICONES DAS MARCAS */}
+          <div className="flex justify-center items-center gap-12 py-8 opacity-40">
+            <Image
+              src="/icons/logo-braip.svg"
+              alt="braip-icon"
+              width={60}
+              height={60}
+              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            
+            <Image
+              src="/icons/be4you-logo.svg"
+              alt="be4you-icon"
+              width={60}
+              height={60}
+              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            
+            <Image
+              src="/icons/payt-logo.svg"
+              alt="payt-icon"
+              width={60}
+              height={60}
+              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+            />
+
+            <Image
+              src="/icons/tiktok-icon.svg"
+              alt="tiktok-icon"
+              width={60}
+              height={60}
+              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+            />
+
+          </div>
+
           <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">
           Escolhemos os melhores produtos digitais para você! 
           </h2>
+
           <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
           Links oficiais, 100% confiáveis, aproveite com segurança e evite golpes!
           </p>
+
+          <div className="flex justify-center py-8">
+            <Image
+              src="/icons/ChevronDown2.svg"
+              alt="Seta para baixo"
+              width={36}
+              height={36}
+              className="w-9 h-9 animate-bounce"
+            />
+          </div>
         </div>
 
         {/* GRADE DE PRODUTOS - LAYOUT SIMPLIFICADO */}
@@ -144,7 +196,23 @@ export default function LandingPage() {
       {/* RODAPÉ */}
       <footer className="border-t border-red-500/20 py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2024 - Todos os direitos reservados. Landing de Direcionamento.</p>
+        <div className="flex items-center justify-center"> 
+        <Image
+              src="/images/logo-perfil.svg"
+              alt="Logo"
+              width={60}
+              height={60}
+              className="w-20 h-20"
+              priority
+              />
+          </div>
+          <p className="text-gray-400 " >
+            © 2025 - Todos os direitos reservados.     
+              </p>
+          <p className="text-gray-400 " >
+            Termos de uso e Privaciade.     
+           </p>
+
         </div>
       </footer>
     </div>

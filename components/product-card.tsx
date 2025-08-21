@@ -6,6 +6,7 @@
  * Exibe informações do produto e botão de direcionamento
  * Props: imagem, nome, titulo, valor, linkAfiliado
  * Design: fundo preto, bordas vermelhas com brilho, hover effects
+ * Otimizado para exibir produtos corretamente
  */
 
 import Image from "next/image"
@@ -29,33 +30,41 @@ export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: Produ
   }
 
   return (
-    <div className="bg-black border border-red-500/30 rounded-lg overflow-hidden shadow-[0_0_10px_rgba(239,68,68,0.2)] hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300">
-      {/* IMAGEM DO PRODUTO - ALTURA REDUZIDA */}
-      <div className="relative h-32 sm:h-40 overflow-hidden">
-        <Image src={imagem || "/placeholder.svg"} alt={nome} fill className="object-cover" />
+    <div className="bg-black border border-grey-500 rounded-lg overflow-hidden shadow-[0_0_10px_rgb(200, 200, 200)] hover:shadow-[0_0_20px_rgb(210, 210, 210)] transition-all duration-300">
+      {/* CONTAINER DA IMAGEM - OTIMIZADO PARA PRODUTOS */}
+      <div className="relative h-48 sm:h-56 bg-white/5 flex items-center justify-center p-4">
+        <div className="relative w-full h-full">
+          <Image 
+            src={imagem || "/placeholder.svg"} 
+            alt={nome} 
+            fill 
+            className="object-contain hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
       </div>
 
-      {/* CONTEÚDO DO CARD - PADDING REDUZIDO */}
+      {/* CONTEÚDO DO CARD */}
       <div className="p-4 space-y-3">
         {/* NOME DO PRODUTO */}
-        <h3 className="text-base sm:text-lg font-semibold text-gray-200">{nome}</h3>
+        <h3 className="text-base sm:text-lg font-semibold text-gray-200 text-center">{nome}</h3>
 
-        {/* TÍTULO/DESCRIÇÃO - MAIS COMPACTO */}
-        <p className="text-gray-400 text-sm leading-snug line-clamp-2">{titulo}</p>
+        {/* TÍTULO/DESCRIÇÃO */}
+        <p className="text-gray-400 text-sm leading-snug text-center line-clamp-3">{titulo}</p>
 
         {/* SEÇÃO DE VALOR E BOTÃO */}
-        <div className="space-y-3">
+        <div className="space-y-4 pt-2">
           {/* VALOR DO PRODUTO */}
           <div className="text-center">
-            <span className="text-xl sm:text-2xl font-bold text-red-500">{valor}</span>
+            <span className="text-2xl sm:text-3xl font-bold text-gray-200">{valor}</span>
           </div>
 
-          {/* BOTÃO DE DIRECIONAMENTO - MAIS COMPACTO */}
+          {/* BOTÃO DE DIRECIONAMENTO */}
           <Button
             onClick={handleRedirect}
-            className="w-full bg-black border-2 border-red-500 text-gray-200 hover:bg-red-500 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(239,68,68,0.3)] hover:shadow-[0_0_15px_rgba(239,68,68,0.5)] font-semibold py-2 text-sm"
+            className="w-full bg-black border border-gray-500 text-gray-200 hover:bg-gray-600700 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(200,200,200,0.3)] hover:shadow-[0_0_15px_rgba(200,200,200,0.5)] font-semibold py-3 text-sm uppercase tracking-wide"
           >
-            QUERO AGORA
+            QUERO AGORA!
           </Button>
         </div>
       </div>

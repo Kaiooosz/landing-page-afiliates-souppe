@@ -21,9 +21,9 @@
   --accent-foreground: oklch(0.9 0 0);
   --destructive: oklch(0.6 0.25 25);
   --destructive-foreground: oklch(0.9 0 0);
-  --border: oklch(0.6 0.25 25 / 0.3); /* Borda vermelha transparente */
+  --border: oklch(0.7 0 0); /* Borda vermelha transparente */
   --input: oklch(0.1 0 0);
-  --ring: oklch(0.6 0.25 25);
+  --ring: oklch(0.7 0 0);
   --chart-1: oklch(0.6 0.25 25);
  
   --radius: 0.625rem;
@@ -33,8 +33,8 @@
   --sidebar-primary-foreground: oklch(0.9 0 0);
   --sidebar-accent: oklch(0.1 0 0);
   --sidebar-accent-foreground: oklch(0.9 0 0);
-  --sidebar-border: oklch(0.6 0.25 25 / 0.3);
-  --sidebar-ring: oklch(0.6 0.25 25);
+  --sidebar-border: oklch(0.7 0 0);
+  --sidebar-ring: oklch(0.9 0 0);
 }
 
 .dark {
@@ -65,7 +65,7 @@
   --sidebar-primary-foreground: oklch(0.9 0 0);
   --sidebar-accent: oklch(0.1 0 0);
   --sidebar-accent-foreground: oklch(0.9 0 0);
-  --sidebar-border: oklch(0.6 0.25 25 / 0.3);
+  --sidebar-border: oklch(0.7 0 0);
   --sidebar-ring: oklch(0.6 0.25 25);
 }
 
@@ -120,11 +120,11 @@
 /* Adicionando classes customizadas para efeitos de brilho */
 @layer utilities {
   .glow-red {
-    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+    box-shadow: 0 0 20px rgba(200, 200, 200, 0.5);
   }
 
   .glow-red-hover:hover {
-    box-shadow: 0 0 30px rgba(239, 68, 68, 0.7);
+    box-shadow: 0 0 30px rgba(210, 210, 210, 0.7);
   }
 
   .line-clamp-2 {
