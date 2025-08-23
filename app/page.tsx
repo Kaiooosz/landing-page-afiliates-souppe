@@ -2,13 +2,13 @@
  * LANDING PAGE DE DIRECIONAMENTO
  *
  * Esta é a página principal que direciona leads para produtos afiliados.
- * Contém foto de perfil e 10 componentes de produtos com design customizado:
- * - Background preto
- * - Componentes pretos com bordas vermelhas brilhantes
- * - Texto cinza claro
+ * Contém foto de perfil e produtos com design customizado:
+ * - Background cinza com brilho sutil
+ * - Componentes brancos/cinzas com detalhes azuis
+ * - Texto branco/cinza
  * - Botões de direcionamento para links de afiliado
  */
-
+import { Header } from "@/components/header"
 import { ProfileHeader } from "@/components/profile-header"
 import { ProductCard } from "@/components/product-card"
 import Image from "next/image"
@@ -67,7 +67,6 @@ const produtos = [
     valor: "R$ 389,70",
     linkAfiliado: "https://cicatribem.com.br/products/gel-redutor-cicatribem-200g-4-unidades?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 10,
     imagem: "/images/rd-01.png",
@@ -76,7 +75,6 @@ const produtos = [
     valor: "R$  159,90",
     linkAfiliado: "https://cicatribem.com.br/products/regenerador-dermico-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 11,
     imagem: "/images/rd-02.png",
@@ -85,7 +83,6 @@ const produtos = [
     valor: "R$ 319,80",
     linkAfiliado: "https://cicatribem.com.br/products/combo-2-unidades-regenerador-dermico-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 12,
     imagem: "/images/rd-04.png",
@@ -94,7 +91,6 @@ const produtos = [
     valor: "R$ 466,91",
     linkAfiliado: "https://cicatribem.com.br/products/combo-4-unidades-regenerador-dermico-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 8,
     imagem: "/images/af-01.png",
@@ -104,14 +100,13 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/acido-folico-omega-3-iodo-e-vitaminas-cicatribem-60-capsulas?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 8,
+    id: 81,
     imagem: "/images/af-03.png",
     nome: "3 unidades Multivitamínico",
     titulo: "Ácido Fólico, acelerando o crescimento capilar, fortalecimento das unhas, melhora o aspecto da pele e ainda auxilia na saúde cardiovascular!",
     valor: "R$ 179,82",
     linkAfiliado: "https://cicatribem.com.br/products/combo-2-unidades-esfoliante-corporal-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-  
   {
     id: 9,
     imagem: "/images/af-06.png",
@@ -120,7 +115,6 @@ const produtos = [
     valor: "R$ 213,93",
     linkAfiliado: "https://cicatribem.com.br/products/combo-6-unidades-vitamina-cicatribem-60-capsulas?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 13,
     imagem: "/images/es-01.png",
@@ -129,7 +123,6 @@ const produtos = [
     valor: "R$ 99,90",
     linkAfiliado: "https://cicatribem.com.br/products/esfoliante-corporal-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 14,
     imagem: "/images/es-02.png",
@@ -138,7 +131,6 @@ const produtos = [
     valor: "R$ 179,82",
     linkAfiliado: "https://cicatribem.com.br/products/combo-2-unidades-esfoliante-corporal-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 15,
     imagem: "/images/es-04.png",
@@ -147,16 +139,14 @@ const produtos = [
     valor: "R$ 319,80",
     linkAfiliado: "https://cicatribem.com.br/products/combo-4-unidades-esfoliante-corporal-cicatribem-150g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
-    id: 15,
+    id: 16,
     imagem: "/images/cd-rd-es-gr-01.png",
     nome: "Kit Completo - cicatribem.",
     titulo: "Sua Experiência completa, cuidado para na viciar nesses queridinhos!",
     valor: "R$ 362,74",
     linkAfiliado: "https://cicatribem.com.br/products/kit-tudo?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
-
   {
     id: 100,
     imagem: "/images/liftDetox.png",
@@ -174,6 +164,9 @@ const produtos = [
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-black">
+      {/* HEADER DE NAVEGAÇÃO */}
+      <Header />
+      
       {/* SEÇÃO DO CABEÇALHO COM PERFIL */}
       <ProfileHeader />
 
@@ -181,22 +174,18 @@ export default function LandingPage() {
       <main className="container mx-auto px-4 py-8">
         {/* TÍTULO DA SEÇÃO DE PRODUTOS */}
         <div className="text-center mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
             Compre pelos links oficiais a baixo!
           </h2>
 
-          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
-          Ofertas exclusivas dos nossos parceiros oficiais, com preços especiais. 
-          </p>
-
           {/* SEÇÃO ICONES DAS MARCAS */}
-          <div className="flex justify-center items-center gap-12 py-8 opacity-40">
+          <div className="flex justify-center items-center gap-6 md:gap-12 py-6 md:py-8 opacity-30">
             <Image
               src="/icons/logo-braip.svg"
               alt="braip-icon"
               width={60}
               height={60}
-              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+              className="w-12 h-12 md:w-15 md:h-15 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-300"
             />
             
             <Image
@@ -204,7 +193,7 @@ export default function LandingPage() {
               alt="be4you-icon"
               width={60}
               height={60}
-              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+              className="w-12 h-12 md:w-15 md:h-15 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-300"
             />
             
             <Image
@@ -212,7 +201,7 @@ export default function LandingPage() {
               alt="payt-icon"
               width={60}
               height={60}
-              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+              className="w-12 h-12 md:w-15 md:h-15 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-300"
             />
 
             <Image
@@ -220,32 +209,31 @@ export default function LandingPage() {
               alt="tiktok-icon"
               width={60}
               height={60}
-              className="w-15 h-15 grayscale hover:grayscale-0 transition-all duration-300"
+              className="w-12 h-12 md:w-15 md:h-15 grayscale hover:grayscale-0 hover:opacity-60 transition-all duration-300"
             />
-
           </div>
 
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-200 mb-3">
-          Escolhemos os melhores produtos digitais para você! 
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            Escolhemos os melhores produtos para você! 
           </h2>
 
-          <p className="text-gray-400 text-base md:text-lg max-w-xl mx-auto">
-          Links oficiais, 100% confiáveis, aproveite com segurança e evite golpes!
+          <p className="text-gray-300 text-base md:text-lg max-w-xl mx-auto">
+            Links dos sites oficiais, 100% confiáveis, aproveite com segurança e evite golpes!
           </p>
 
-          <div className="flex justify-center py-8">
+          <div className="flex justify-center py-6 md:py-8">
             <Image
               src="/icons/ChevronDown2.svg"
               alt="Seta para baixo"
               width={36}
               height={36}
-              className="w-9 h-9 animate-bounce"
+              className="w-8 h-8 md:w-9 md:h-9 animate-bounce opacity-60"
             />
           </div>
         </div>
 
-        {/* GRADE DE PRODUTOS - LAYOUT SIMPLIFICADO */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {/* GRADE DE PRODUTOS - LAYOUT EM LISTA VERTICAL */}
+        <div className="space-y-4 max-w-4xl mx-auto">
           {produtos.map((produto) => (
             <ProductCard
               key={produto.id}
@@ -257,28 +245,30 @@ export default function LandingPage() {
             />
           ))}
         </div>
+
+        {/* SEÇÃO DE GARANTIAS */}
+        
       </main>
 
       {/* RODAPÉ */}
-      <footer className="border-t border-red-500/20 py-8">
+      <footer className="border-t border-gray-700 py-8 mt-12">
         <div className="container mx-auto px-4 text-center">
-        <div className="flex items-center justify-center"> 
-        <Image
+          <div className="flex items-center justify-center mb-4"> 
+            <Image
               src="/images/logo-perfil.svg"
               alt="Logo"
               width={60}
               height={60}
-              className="w-20 h-20"
+              className="w-16 h-16 md:w-20 md:h-20"
               priority
-              />
+            />
           </div>
-          <p className="text-gray-400 " >
+          <p className="text-gray-400 text-sm md:text-base mb-2">
             © 2025 - Todos os direitos reservados.     
-              </p>
-          <p className="text-gray-400 " >
-            Termos de uso e Privaciade.     
-           </p>
-
+          </p>
+          <p className="text-gray-500 text-xs md:text-sm">
+            Termos de uso e Privacidade.     
+          </p>
         </div>
       </footer>
     </div>

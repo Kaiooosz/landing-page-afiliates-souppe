@@ -1,16 +1,5 @@
-"use client"
-
-/**
- * COMPONENTE DE CARD DE PRODUTO
- *
- * Exibe informações do produto e botão de direcionamento
- * Props: imagem, nome, titulo, valor, linkAfiliado
- * Design: fundo preto, bordas vermelhas com brilho, hover effects
- * Otimizado para exibir produtos corretamente
- */
-
 import Image from "next/image"
-import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 interface ProductCardProps {
   imagem: string
@@ -21,51 +10,44 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: ProductCardProps) {
-  /**
-   * FUNÇÃO PARA REDIRECIONAR PARA LINK DE AFILIADO
-   * Abre o link em nova aba para não perder o usuário da landing
-   */
-  const handleRedirect = () => {
-    window.open(linkAfiliado, "_blank", "noopener,noreferrer")
-  }
-
   return (
-    <div className="bg-black border border-grey-500 rounded-lg overflow-hidden shadow-[0_0_10px_rgb(200, 200, 200)] hover:shadow-[0_0_20px_rgb(210, 210, 210)] transition-all duration-300">
-      {/* CONTAINER DA IMAGEM - OTIMIZADO PARA PRODUTOS */}
-      <div className="relative h-48 sm:h-56 bg-white/5 flex items-center justify-center p-4">
-        <div className="relative w-full h-full">
-          <Image 
-            src={imagem || "/placeholder.svg"} 
-            alt={nome} 
-            fill 
-            className="object-contain hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+    <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition-all duration-300">
+      <div className="flex items-center gap-4">
+        {/* IMAGEM DO PRODUTO */}
+        <div className="flex-shrink-0">
+          <Image
+            src={imagem}
+            alt={nome}
+            width={80}
+            height={80}
+            className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-lg"
           />
         </div>
-      </div>
-
-      {/* CONTEÚDO DO CARD */}
-      <div className="p-4 space-y-3">
-        {/* NOME DO PRODUTO */}
-        <h3 className="text-base sm:text-lg font-semibold text-gray-200 text-center">{nome}</h3>
-
-        {/* TÍTULO/DESCRIÇÃO */}
-        <p className="text-gray-400 text-sm leading-snug text-center line-clamp-3">{titulo}</p>
-
-        {/* SEÇÃO DE VALOR E BOTÃO */}
-        <div className="space-y-4 pt-2">
-          {/* VALOR DO PRODUTO */}
-          <div className="text-center">
-            <span className="text-2xl sm:text-3xl font-bold text-gray-200">{valor}</span>
+        
+        {/* INFORMAÇÕES DO PRODUTO */}
+        <div className="flex-grow min-w-0">
+          <h3 className="text-white font-semibold text-sm md:text-base mb-1 truncate">
+            {nome}
+          </h3>
+          
+          <p className="text-gray-400 text-xs md:text-sm mb-2 line-clamp-2">
+            {titulo}
+          </p>
+          
+          <div className="flex items-center justify-between">
+            <span className="text-white font-bold text-lg md:text-xl">
+              {valor}
+            </span>
+            
+            <Link 
+              href={linkAfiliado}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
+            >
+              Comprar
+            </Link>
           </div>
-
-          {/* BOTÃO DE DIRECIONAMENTO */}
-          <Button
-            onClick={handleRedirect}
-            className="w-full bg-black border border-gray-500 text-gray-200 hover:bg-gray-600700 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(200,200,200,0.3)] hover:shadow-[0_0_15px_rgba(200,200,200,0.5)] font-semibold py-3 text-sm uppercase tracking-wide"
-          >
-            QUERO AGORA!
-          </Button>
         </div>
       </div>
     </div>

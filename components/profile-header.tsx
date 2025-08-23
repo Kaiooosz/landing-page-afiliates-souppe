@@ -15,11 +15,11 @@ export function ProfileHeader() {
         {/* FOTO DE PERFIL COM BORDA VERMELHA BRILHANTE - tamanho reduzido para mobile */}
         <div className="relative">
           <Image
-            src="/images/logo-perfil.svg"
+            src="/images/shop-souppe-logo.png"
             alt="Logo do Perfil"
-            width={96}
-            height={96}
-            className="w-28 h-20 sm:w-32 sm:h-24"
+            width={120}
+            height={120}
+            className="w-24 h-24 md:w-32 md:h-32"
             priority
           />
         </div>
@@ -33,9 +33,6 @@ export function ProfileHeader() {
           <p className="text-sm sm:text-base text-gray-300 max-w-md mx-auto leading-relaxed">
            Entre no Grupo VIP do Telegram!
           </p>
-          <p className="text-sm sm:text-base text-gray-300 max-w-md mx-auto leading-relaxed">
-            E receba cupons exclusivos e dicas para acelerar seus resultados, Descontos Imperdíveis e Ofertas Relâmpago!
-          </p>
           
           {/* BOTÃO DO TELEGRAM */}
           <div className="mt-4">
@@ -43,7 +40,7 @@ export function ProfileHeader() {
               href="https://t.me/+A2UKDEAk-HI4MjNh"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-500 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               <svg 
                 width="20" 
