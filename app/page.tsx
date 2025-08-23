@@ -28,7 +28,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/clareador-dermico-cicatribem-60g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 3,
+    id: 2,
     imagem: "/images/cd-02.png",
     nome: "2 unidades - Claerador Dérmico",
     titulo: "Creme Clareador de Manchas – Melasma - virilha - axilia.",
@@ -36,7 +36,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/clareador-dermico-cicatribem-60g-2-unidades?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 4,
+    id: 3,
     imagem: "/images/cd-04.png",
     nome: "4 unidades - Claerador Dérmico",
     titulo: "Creme Clareador de Manchas – Melasma - virilha - axilia.",
@@ -44,7 +44,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/clareador-dermico-cicatribem-60g-4-unidades?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 5,
+    id: 4,
     imagem: "/images/gr-01.png",
     nome: "Gel Redutor",
     titulo: "Gel Redutor de medidas - Celulites e Flacidez.",
@@ -52,7 +52,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/gel-redutor-cicatribem-200g?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 6,
+    id: 5,
     imagem: "/images/gr-02.png",
     nome: "2 unidade - Gel Redutor",
     titulo: "Gel Redutor de medidas - Celulites e Flacidez.",
@@ -60,7 +60,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/gel-redutor-cicatribem-200g-2-unidades?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 7,
+    id: 6,
     imagem: "/images/gr-04.png",
     nome: "4 unidade - Gel Redutor",
     titulo: "Gel Redutor de medidas - Celulites e Flacidez.",
@@ -69,7 +69,7 @@ const produtos = [
   },
 
   {
-    id: 10,
+    id: 7,
     imagem: "/images/rd-01.png",
     nome: "Regenerador Dêrmico",
     titulo: "O Regenerador Dérmico da Cicatribem é um poderoso creme ultra hidratante de tratamento para redução e prevenção das estrias.",
@@ -78,7 +78,7 @@ const produtos = [
   },
 
   {
-    id: 11,
+    id: 8,
     imagem: "/images/rd-02.png",
     nome: "2 unidades Regenerador Dêrmico",
     titulo: "O Regenerador Dérmico da Cicatribem é um poderoso creme ultra hidratante de tratamento para redução e prevenção das estrias.",
@@ -87,7 +87,7 @@ const produtos = [
   },
 
   {
-    id: 12,
+    id: 9,
     imagem: "/images/rd-04.png",
     nome: "4 unidades Regenerador Dêrmico",
     titulo: "O Regenerador Dérmico da Cicatribem é um poderoso creme ultra hidratante de tratamento para redução e prevenção das estrias.",
@@ -96,7 +96,7 @@ const produtos = [
   },
 
   {
-    id: 8,
+    id: 10,
     imagem: "/images/af-01.png",
     nome: "Multivitamínico com Ácido Fólico",
     titulo: "Acelerando o crescimento capilar, fortalecimento das unhas, melhora o aspecto da pele e ainda auxilia na saúde cardiovascular!",
@@ -104,7 +104,7 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/acido-folico-omega-3-iodo-e-vitaminas-cicatribem-60-capsulas?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 8,
+    id: 11,
     imagem: "/images/af-03.png",
     nome: "3 unidades Multivitamínico",
     titulo: "Ácido Fólico, acelerando o crescimento capilar, fortalecimento das unhas, melhora o aspecto da pele e ainda auxilia na saúde cardiovascular!",
@@ -113,7 +113,7 @@ const produtos = [
   },
   
   {
-    id: 9,
+    id: 12,
     imagem: "/images/af-06.png",
     nome: "6 unidades Multivitamínico",
     titulo: "Ácido Fólico, acelerando o crescimento capilar, fortalecimento das unhas, melhora o aspecto da pele e ainda auxilia na saúde cardiovascular!",
@@ -149,7 +149,7 @@ const produtos = [
   },
 
   {
-    id: 15,
+    id: 16,
     imagem: "/images/cd-rd-es-gr-01.png",
     nome: "Kit Completo - cicatribem.",
     titulo: "Sua Experiência completa, cuidado para na viciar nesses queridinhos!",
@@ -158,7 +158,7 @@ const produtos = [
   },
 
   {
-    id: 100,
+    id: 17,
     imagem: "/images/liftDetox.png",
     nome: "liftDetox",
     titulo: "O emagrecedor mais procurado do Brasil, Lift Detox Black, é um poderoso inibidor de gordura corporal com colágeno que ajuda a inibir o apetite, controla a ansiedade, acelera o metabolismo, combate a flacidez e seca muito a barriga grande!",
