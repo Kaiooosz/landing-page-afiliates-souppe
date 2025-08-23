@@ -11,6 +11,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
 
 interface ProductCardProps {
   imagem: string
@@ -21,16 +22,24 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: ProductCardProps) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   /**
    * FUNÇÃO PARA REDIRECIONAR PARA LINK DE AFILIADO
    * Abre o link em nova aba para não perder o usuário da landing
    */
   const handleRedirect = () => {
-    window.open(linkAfiliado, "_blank", "noopener,noreferrer")
+    if (isClient && typeof window !== 'undefined') {
+      window.open(linkAfiliado, "_blank", "noopener,noreferrer")
+    }
   }
 
   return (
-    <div className="bg-black border border-grey-500 rounded-lg overflow-hidden shadow-[0_0_10px_rgb(200, 200, 200)] hover:shadow-[0_0_20px_rgb(210, 210, 210)] transition-all duration-300">
+    <div className="bg-black border border-gray-500 rounded-lg overflow-hidden shadow-[0_0_10px_rgb(200, 200, 200)] hover:shadow-[0_0_20px_rgb(210, 210, 210)] transition-all duration-300">
       {/* CONTAINER DA IMAGEM - OTIMIZADO PARA PRODUTOS */}
       <div className="relative h-48 sm:h-56 bg-white/5 flex items-center justify-center p-4">
         <div className="relative w-full h-full">
@@ -40,6 +49,10 @@ export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: Produ
             fill 
             className="object-contain hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "/placeholder.svg";
+            }}
           />
         </div>
       </div>
@@ -62,7 +75,7 @@ export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: Produ
           {/* BOTÃO DE DIRECIONAMENTO */}
           <Button
             onClick={handleRedirect}
-            className="w-full bg-black border border-gray-500 text-gray-200 hover:bg-gray-600700 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(200,200,200,0.3)] hover:shadow-[0_0_15px_rgba(200,200,200,0.5)] font-semibold py-3 text-sm uppercase tracking-wide"
+            className="w-full bg-black border border-gray-500 text-gray-200 hover:bg-gray-700 hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(200,200,200,0.3)] hover:shadow-[0_0_15px_rgba(200,200,200,0.5)] font-semibold py-3 text-sm uppercase tracking-wide"
           >
             QUERO AGORA!
           </Button>

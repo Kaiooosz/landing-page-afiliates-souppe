@@ -1,3 +1,5 @@
+"use client"
+
 /**
  * COMPONENTE DE CABEÇALHO COM PERFIL
  * 
@@ -21,6 +23,10 @@ export function ProfileHeader() {
             height={96}
             className="w-28 h-20 sm:w-32 sm:h-24"
             priority
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "/favicon.ico";
+            }}
           />
         </div>
         
