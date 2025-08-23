@@ -11,8 +11,8 @@
   --card-foreground: oklch(0.9 0 0);
   --popover: oklch(0 0 0);
   --popover-foreground: oklch(0.9 0 0);
-  --primary: oklch(0.6 0.25 25);/* Vermelho */
-  --secundary: rgba(0, 51, 102, 1)
+  --primary: rgba(0, 48, 107, 1);/* Azul */
+  --secondary: rgba(0, 51, 102, 1);
   --primary-foreground: oklch(0.9 0 0);
   --secondary: oklch(0.1 0 0);
   --secondary-foreground: oklch(0.8 0 0);
@@ -45,7 +45,7 @@
   --card-foreground: oklch(0.9 0 0);
   --popover: oklch(0 0 0);
   --popover-foreground: oklch(0.9 0 0);
-  --primary: oklch(0.6 0.25 25);
+  --primary: rgba(0, 48, 107, 1);
   --primary-foreground: oklch(0.9 0 0);
   --secondary: oklch(0.1 0 0);
   --secondary-foreground: oklch(0.9 0 0);
@@ -134,4 +134,53 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Melhorias para mobile */
+@media (max-width: 640px) {
+  /* Ajusta o scroll suave */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Melhora o toque em dispositivos móveis */
+  button, a {
+    -webkit-tap-highlight-color: rgba(0, 48, 107, 1);
+  }
+
+  /* Evita zoom no input em iOS */
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Animações suaves para hover em desktop */
+@media (hover: hover) {
+  .hover\:scale-105:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Remove animações para usuários que prefererem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 }

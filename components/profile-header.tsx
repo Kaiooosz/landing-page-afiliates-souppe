@@ -40,7 +40,7 @@ export function ProfileHeader() {
               href="https://t.me/+A2UKDEAk-HI4MjNh"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
+              className="inline-flex items-center gap-2 bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
             >
               <svg 
                 width="20" 

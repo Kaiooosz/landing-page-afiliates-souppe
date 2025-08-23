@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: ProductCardProps) {
   return (
-    <div className="bg-gray-900 border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition-all duration-300">
+    <div className="bg-black border border-gray-700 rounded-lg p-4 hover:bg-gray-800 transition-all duration-300">
       <div className="flex items-center gap-4">
         {/* IMAGEM DO PRODUTO */}
         <div className="flex-shrink-0">
@@ -43,7 +43,7 @@ export function ProductCard({ imagem, nome, titulo, valor, linkAfiliado }: Produ
               href={linkAfiliado}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
+              className="bg-primary hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
             >
               Comprar
             </Link>
