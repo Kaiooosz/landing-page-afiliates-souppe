@@ -50,7 +50,13 @@ export function Header() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Instagram
+            <Image
+              src="/icone-insta.svg"
+              alt="Instagram"
+              width={24}
+              height={24}
+              className="w-6 h-6"
+             />
             </a>
           </nav>
 
