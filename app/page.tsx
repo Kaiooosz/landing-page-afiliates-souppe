@@ -148,12 +148,21 @@ const produtos = [
     linkAfiliado: "https://cicatribem.com.br/products/kit-tudo?bg_ref=nzkMTzLBNs&utm_source=CREATOR&utm_medium=INFLUENCER&utm_campaign=kaio%20souza",
   },
   {
-    id: 100,
+    id: 17,
     imagem: "/images/liftDetox.png",
     nome: "liftDetox",
     titulo: "O emagrecedor mais procurado do Brasil, Lift Detox Black, é um poderoso inibidor de gordura corporal com colágeno que ajuda a inibir o apetite, controla a ansiedade, acelera o metabolismo, combate a flacidez e seca muito a barriga grande!",
     valor: "R$ 137,00",
     linkAfiliado: "https://liftdetoxcaps.com/b4/?b4f=Nmk_2Td3Rv",
+  },
+
+  {
+    id: 18,
+    imagem: "/images/Durazul-image.png",
+    nome: "Durazul.",
+    titulo: "Disposição, resultado, pré treino, P@u funcionando.",
+    valor: "R$ 167,00",
+    linkAfiliado: "ttps://pv.b4you.com.br/pages/b574d4a5-7417-45b6-9039-d05d675aa877/rFtO1SQmAR",
   },
 ]
 
